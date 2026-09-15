@@ -47,3 +47,18 @@ nav a:hover {
 /* -------------------------------------- */
 /* taj's css (jobs & apply) */
 /* -------------------------------------- */
+
+.jobs-sidebar {
+    float: right;
+    width: 25%;
+    margin-left: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+}
+
+.jobs-content {
+    float: left;
+    width: 70%;
+}
