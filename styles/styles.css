@@ -11,6 +11,11 @@ body {
     color: #333;
 }
 
+/* basic text and list spacing */
+p, h1, h2, h3, h4 { margin-bottom: 15px; }
+ul, ol { margin-bottom: 15px; margin-left: 25px; }
+li { margin-bottom: 5px; }
+
 /* nav bar */
 nav {
     background-color: #004080;
