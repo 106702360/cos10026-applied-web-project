@@ -1,45 +1,49 @@
-/* ======================================================= */
-/* 🌐 GLOBAL STYLES & HEADER/FOOTER (Shared/Taj's Task)    */
-/* ======================================================= */
+/* global styles & header/footer */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f8f9fa;
     color: #333;
 }
+
+/* nav bar */
 nav {
     background-color: #004080;
     padding: 15px;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
+
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
 }
+
 nav a:hover {
     text-decoration: underline;
     color: #ffcc00;
 }
 
-/* ======================================================= */
-/* 👑 AFNAN'S TERRITORY (index.html & about.html)          */
-/* ======================================================= */
-/* Afnan's CSS goes here! */
+
+/* -------------------------------------- */
+/* afnan's css (index & about) */
+/* -------------------------------------- */
 
 
 
-/* ======================================================= */
-/* 💻 TAJ'S TERRITORY (jobs.html & apply.html)             */
-/* ======================================================= */
-/* Taj's CSS goes here! */
+
+/* -------------------------------------- */
+/* taj's css (jobs & apply) */
+/* -------------------------------------- */
