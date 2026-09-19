@@ -46,7 +46,72 @@ nav a:hover {
 /* afnan's css (index & about) */
 /* -------------------------------------- */
 
+/* Bordered figure requirement */
+.team-photo {
+    text-align: center;
+    margin: 25px 0;
+    padding: 15px;
+    border: 2px solid #004080; /* Hex color border */
+    border-radius: 6px;
+    background-color: #f8f9fa; /* Hex color background */
+}
 
+.team-photo figcaption {
+    font-style: italic;
+    color: #555555;
+    margin-top: 8px;
+}
+
+/* Styled Student IDs requirement */
+.student-id {
+    font-family: monospace;
+    background-color: #eeeeee;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #333333;
+    font-size: 0.95rem;
+}
+
+/* Fun Facts Table with hex colors and hover effect */
+.fun-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.fun-table th {
+    background-color: #004080; /* Hex color */
+    color: #ffffff; /* Hex color */
+    padding: 10px;
+    text-align: left;
+}
+
+.fun-table td {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd; /* Hex color */
+}
+
+/* Table hover effect requirement */
+.fun-table tbody tr:hover {
+    background-color: #f1f8ff; /* Hex color */
+    cursor: pointer;
+}
+
+/* Definition List styling */
+.member-dt {
+    font-size: 1.1rem;
+    color: #004080;
+    font-weight: bold;
+    margin-top: 15px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 4px;
+}
+
+.member-dd {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
 
 
 /* -------------------------------------- */
