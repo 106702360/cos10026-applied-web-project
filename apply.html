@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket Digital | Apply</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <!-- Embedded CSS for rubric -->
+    <style>
+        .apply-header { text-align: center; margin-bottom: 20px; }
+        .required-star { color: red; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div style="background-color: #ffffff; color: #004080; padding: 20px; text-align: center; border-bottom: 4px solid #ffcc00;">
+            <img src="images/logo.png" alt="Basket Digital Logo" width="80">
+            <h1 style="font-size: 2.2rem; margin-bottom: 5px;">Basket Digital Careers</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Job Vacancies</a></li>
+                <li><a href="apply.html">Apply Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 30px auto; padding: 20px; background-color: #fff; border-radius: 5px;">
+        <div class="apply-header">
+            <h2>Job Application Form</h2>
+            <p>Please fill out all required fields (<span class="required-star">*</span>) to apply.</p>
+        </div>
+
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST" class="apply-form">
+            
+            <div class="form-group">
+                <label for="job-ref">Job Reference Number <span class="required-star">*</span></label>
+                <input type="text" id="job-ref" name="job-ref" pattern="[A-Za-z0-9]{5}" title="Exactly 5 alphanumeric characters" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="first-name">First Name <span class="required-star">*</span></label>
+                    <input type="text" id="first-name" name="first-name" pattern="[A-Za-z\s]{1,20}" title="Max 20 alpha characters" required>
+                </div>
+                <div class="form-group half-width">
+                    <label for="last-name">Last Name <span class="required-star">*</span></label>
+                    <input type="text" id="last-name" name="last-name" pattern="[A-Za-z\s]{1,20}" title="Max 20 alpha characters" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="dob">Date of Birth <span class="required-star">*</span></label>
+                    <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" title="Format: dd/mm/yyyy" required>
+                </div>
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Gender <span class="required-star">*</span></legend>
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+                <label><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="street">Street Address <span class="required-star">*</span></label>
+                <input type="text" id="street" name="street" maxlength="40" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="suburb">Suburb/Town <span class="required-star">*</span></label>
+                    <input type="text" id="suburb" name="suburb" maxlength="40" required>
+                </div>
+                <div class="form-group quarter-width">
+                    <label for="state">State <span class="required-star">*</span></label>
+                    <select id="state" name="state" required>
+                        <option value="">Select...</option>
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                    </select>
+                </div>
+                <div class="form-group quarter-width">
+                    <label for="postcode">Postcode <span class="required-star">*</span></label>
+                    <input type="text" id="postcode" name="postcode" pattern="\d{4}" title="Exactly 4 digits" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="email">Email <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group half-width">
+                    <label for="phone">Phone Number <span class="required-star">*</span></label>
+                    <input type="text" id="phone" name="phone" pattern="\d{8,12}" title="8 to 12 digits" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Skill List <span class="required-star">*</span></label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="skills[]" value="HTML"> HTML5</label>
+                    <label><input type="checkbox" name="skills[]" value="CSS"> CSS3</label>
+                    <label><input type="checkbox" name="skills[]" value="JS"> JavaScript</label>
+                    <label><input type="checkbox" name="skills[]" value="UI"> UI/UX Design</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="other-skills">Other Skills (Optional)</label>
+                <textarea id="other-skills" name="other-skills" rows="4"></textarea>
+            </div>
+
+            <!-- Inline CSS on button for rubric -->
+            <button type="submit" style="background-color: #004080; color: white; padding: 10px 20px; border: none; font-size: 1.1rem; cursor: pointer; border-radius: 4px;">Submit Application</button>
+
+        </form>
+    </main>
+
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center; margin-top: 50px;">
+        <div style="margin-bottom: 10px;">
+            <a href="https://basket-digital-g05.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" style="color: #ffcc00;">Jira Board</a> |
+            <a href="https://github.com/" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
+            <a href="mailto:careers@basketdigital.com" style="color: #ffcc00;">Email HR</a>
+        </div>
+        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Basket Digital Jobs.</p>
+    </footer>
+
+</body>
+</html>

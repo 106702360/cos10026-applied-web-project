@@ -52,18 +52,42 @@ nav a:hover {
 /* -------------------------------------- */
 /* taj's css (jobs & apply) */
 /* -------------------------------------- */
-
-.jobs-sidebar {
-    float: right;
-    width: 25%;
-    margin-left: 20px;
-    padding: 15px;
+/* taj's css (jobs & apply) */
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.half-width {
+    flex: 1 1 45%;
+}
+.quarter-width {
+    flex: 1 1 20%;
+}
+.apply-form input[type="text"],
+.apply-form input[type="email"],
+.apply-form select,
+.apply-form textarea {
+    padding: 8px;
     border: 1px solid #ccc;
-    background-color: #f4f4f4;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
     border-radius: 4px;
 }
-
-.jobs-content {
-    float: left;
-    width: 70%;
+.checkbox-group label, fieldset label {
+    margin-right: 15px;
 }
