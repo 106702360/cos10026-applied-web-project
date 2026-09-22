@@ -9,6 +9,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f8f9fa;
     color: #333;
+    line-height: 1.6; /* improved readability for accessibility */
+}
+
+/* keyboard navigation focus for accessibility */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px solid #004080;
+    outline-offset: 2px;
 }
 
 /* basic text and list spacing */
@@ -43,17 +50,17 @@ nav a:hover {
 
 
 /* -------------------------------------- */
-/* afnan's css (index & about) */
+/* Afnan's CSS (Index & About pages)      */
 /* -------------------------------------- */
 
-/* Bordered figure requirement */
+/* team photo */
 .team-photo {
     text-align: center;
     margin: 25px 0;
     padding: 15px;
-    border: 2px solid #004080; /* Hex color border */
+    border: 2px solid #004080; 
     border-radius: 6px;
-    background-color: #f8f9fa; /* Hex color background */
+    background-color: #f8f9fa; 
 }
 
 .team-photo figcaption {
@@ -62,7 +69,7 @@ nav a:hover {
     margin-top: 8px;
 }
 
-/* Styled Student IDs requirement */
+/* student ID tags */
 .student-id {
     font-family: monospace;
     background-color: #eeeeee;
@@ -72,7 +79,7 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
-/* Fun Facts Table with hex colors and hover effect */
+/* fun facts table */
 .fun-table {
     width: 100%;
     border-collapse: collapse;
@@ -80,24 +87,24 @@ nav a:hover {
 }
 
 .fun-table th {
-    background-color: #004080; /* Hex color */
-    color: #ffffff; /* Hex color */
+    background-color: #004080; 
+    color: #ffffff; 
     padding: 10px;
     text-align: left;
 }
 
 .fun-table td {
     padding: 10px;
-    border-bottom: 1px solid #dddddd; /* Hex color */
+    border-bottom: 1px solid #dddddd; 
 }
 
-/* Table hover effect requirement */
+/* table row hover */
 .fun-table tbody tr:hover {
-    background-color: #f1f8ff; /* Hex color */
+    background-color: #f1f8ff; 
     cursor: pointer;
 }
 
-/* Definition List styling */
+/* member definition list */
 .member-dt {
     font-size: 1.1rem;
     color: #004080;
@@ -115,9 +122,9 @@ nav a:hover {
 
 
 /* -------------------------------------- */
-/* taj's css (jobs & apply) */
+/* Taj's CSS (Jobs & Apply pages)         */
 /* -------------------------------------- */
-/* taj's css (jobs & apply) */
+
 .apply-form {
     display: flex;
     flex-direction: column;
@@ -141,6 +148,7 @@ nav a:hover {
 }
 .apply-form input[type="text"],
 .apply-form input[type="email"],
+.apply-form input[type="date"],
 .apply-form select,
 .apply-form textarea {
     padding: 8px;
@@ -155,4 +163,11 @@ fieldset {
 }
 .checkbox-group label, fieldset label {
     margin-right: 15px;
+}
+
+/* mobile responsiveness for forms */
+@media screen and (max-width: 768px) {
+    .half-width, .quarter-width {
+        flex: 1 1 100%;
+    }
 }
