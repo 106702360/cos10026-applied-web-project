@@ -6,6 +6,7 @@
     <title>Basket Digital | About Us</title>
     <link rel="stylesheet" href="styles/styles.css">
     
+    <!-- Embedded CSS for the About page -->
     <style>
         .about-main {
             max-width: 900px;
@@ -23,18 +24,26 @@
 </head>
 <body>
 
-    <header>
-        <div style="background-color: #ffffff; color: #004080; padding: 20px; text-align: center; border-bottom: 4px solid #ffcc00;">
-            <img src="images/logo.png" alt="Basket Digital Logo" width="80" height="80">
-            <h1 style="font-size: 2.2rem; margin-bottom: 5px;">Basket Digital Careers</h1>
+    <!-- Single Blue Header with Logo (Left) and Nav (Right) matching index.html -->
+    <header style="display: flex; justify-content: space-between; align-items: center; background-color: #004080; padding: 10px 30px; border-bottom: 4px solid #ffcc00;">
+
+        <!-- Left Side: Logo and Slogan -->
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/logo.png" alt="Basket Digital Logo" width="80">
+            <div style="color: white; text-align: left;">
+                <h1 style="font-size: 1.8rem; margin: 0;">Basket Digital</h1>
+                <p style="margin: 0; font-size: 0.9rem; color: #ffcc00;">Join our online retail tech team.</p>
+            </div>
         </div>
-        
+
+        <!-- Right Side: Navigation Links -->
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Job Vacancies</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
-                <li><a href="about.html">About Us</a></li>
+            <ul style="list-style-type: none; margin: 0; padding: 0;">
+                <li style="display: inline; margin: 0 15px;"><a href="index.html">Home</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="jobs.html">Job Vacancies</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="apply.html">Apply Now</a></li>
+                <!-- Active link is now About Us -->
+                <li style="display: inline; margin: 0 15px;"><a href="about.html" style="color: #ffcc00; text-decoration: underline; font-weight: bold;">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +51,7 @@
     <main class="about-main">
         
         <h2>About Group G05</h2>
-        <p>We are the web development team building the recruitment portal for Basket Digital. Both of us are studying for a Bachelor of Computer Science (Data Science).</p>
+        <p>We are the web development team building the recruitment portal for Basket Digital. Both of us are studying for a Bachelor of Computer Science.</p>
 
         <!-- Nested List Requirement -->
         <h3>Class Schedule</h3>
@@ -57,7 +66,8 @@
 
         <!-- Bordered Figure Requirement -->
         <figure class="team-photo">
-            <img src="images/logo.png" alt="Group G05 Team Logo Placeholder" width="180">
+            <!-- Swapped placeholder for your actual group photo file -->
+            <img src="images/group_photo.jpg" alt="Afnan and Taj - Group G05 Team" style="max-width: 100%; height: auto; border-radius: 5px;">
             <figcaption>Group G05 Development Team</figcaption>
         </figure>
 
@@ -107,18 +117,19 @@
 
     </main>
 
+    <!-- Footer with Project Links matching index.html -->
     <footer style="background-color: #333; color: white; padding: 20px; text-align: center; margin-top: 50px;">
         <div style="margin-bottom: 10px;">
-            <a href="https://basket-digital-g05.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" style="color: #ffcc00;">Jira Board</a> |
-            <a href="https://github.com/yourusername/basket-digital-dev" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
-            <a href="mailto:careers@basketdigital.com" style="color: #ffcc00;">Email HR</a>
+            <a href="https://basket-digital-g05.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog" target="_blank" style="color: #ffcc00;">Jira Board</a> |
+            <a href="https://github.com/106702360/cos10026-applied-web-project" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
+            <a href="mailto:contactbasketdigital@gmail.com" style="color: #ffcc00;">Email HR</a>
         </div>
-        
-        <div style="font-size: 0.85rem; max-width: 700px; margin: 0 auto; line-height: 1.4; padding: 10px 0;">
+
+        <div style="font-size: 0.85rem; max-width: 700px; margin: 0 auto; line-height: 1.4;">
             <p><strong>Acknowledgement of Country:</strong> We respectfully acknowledge the Traditional Custodians of the land on which we work and learn, and pay respect to Elders past, present and emerging.</p>
         </div>
-        
-        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Basket Digital Jobs.</p>
+
+        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Basket Digital.</p>
     </footer>
 
 </body>
