@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="styles/styles.css">
     
     <style>
+        /* Background graphic required by rubric */
+        body {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Hero banner styling */
         .hero-banner {
             background-color: #1a1a1a; 
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
@@ -16,19 +26,26 @@
             text-align: center;
             padding: 80px 20px;
         }
+        
+        /* Search area styling */
         .search-section {
-            background-color: #e9ecef;
+            background-color: rgba(233, 236, 239, 0.95);
             padding: 25px;
             text-align: center;
             margin: 20px auto;
             max-width: 600px;
             border-radius: 5px;
         }
+        
+        /* Table container styling */
         .table-section {
+            background-color: rgba(255, 255, 255, 0.95);
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
+            border-radius: 5px;
         }
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -45,37 +62,44 @@
 </head>
 <body>
 
+    <!-- Main Header with Logo and Navigation -->
     <header>
         <div style="background-color: #ffffff; color: #004080; padding: 20px; text-align: center; border-bottom: 4px solid #ffcc00;">
-            <h1 style="font-size: 2.2rem; margin-bottom: 5px;">Basket Digital Careers</h1>
+            <img src="images/logo.png" alt="Basket Digital Logo" width="120">
+            <h1 style="font-size: 2.2rem; margin-bottom: 5px;">Basket Digital</h1>
             <p>Join our online retail tech team.</p>
+            <p style="font-size: 0.9rem;">Connecting top IT and UX talent with the fastest-growing e-commerce platforms.</p>
         </div>
         
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Job Vacancies</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
-                <li><a href="about.html">About Us</a></li>
+            <ul style="list-style-type: none; background-color: #004080; padding: 10px; margin: 0; text-align: center;">
+                <li style="display: inline; margin: 0 15px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="jobs.html" style="color: white; text-decoration: none;">Job Vacancies</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="apply.html" style="color: white; text-decoration: none;">Apply Now</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section with Team Image -->
         <section class="hero-banner">
             <h2>We are hiring IT and UX staff!</h2>
             <p>Basket Digital is looking for new developers and designers to upgrade our online shopping website.</p>
+            <img src="images/home_image.jpg" alt="Tech team working on e-commerce dashboard" style="max-width: 100%; height: auto; max-height: 350px; margin-top: 15px; border-radius: 5px;">
         </section>
 
+        <!-- Job Search Form -->
         <section class="search-section">
             <h2>Search Open Jobs</h2>
             <form action="jobs.html" method="GET">
                 <label for="job-search">Job Title:</label>
                 <input type="search" id="job-search" name="q" placeholder="e.g. Web Developer" required style="padding: 6px; width: 60%;">
-                <button type="submit" style="padding: 6px 12px; background-color: #004080; color: white; border: none;">Search</button>
+                <button type="submit" style="padding: 6px 12px; background-color: #004080; color: white; border: none; cursor: pointer;">Search</button>
             </form>
         </section>
 
+        <!-- Departments Table -->
         <section class="table-section">
             <h2>Departments Hiring Right Now</h2>
             <table border="1">
@@ -106,18 +130,19 @@
         </section>
     </main>
 
+    <!-- Footer with Project Links -->
     <footer style="background-color: #333; color: white; padding: 20px; text-align: center; margin-top: 50px;">
         <div style="margin-bottom: 10px;">
             <a href="https://basket-digital-g05.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog" target="_blank" style="color: #ffcc00;">Jira Board</a> |
-            <a href="https://github.com/yourusername/basket-digital-dev" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
-            <a href="mailto:careers@basketdigital.com" style="color: #ffcc00;">Email HR</a>
+            <a href="https://github.com/106702360/cos10026-applied-web-project" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
+            <a href="mailto:contactbasketdigital@gmail.com" style="color: #ffcc00;">Email HR</a>
         </div>
         
         <div style="font-size: 0.85rem; max-width: 700px; margin: 0 auto; line-height: 1.4;">
             <p><strong>Acknowledgement of Country:</strong> We respectfully acknowledge the Traditional Custodians of the land on which we work and learn, and pay respect to Elders past, present and emerging.</p>
         </div>
         
-        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Basket Digital Jobs.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Basket Digital.</p>
     </footer>
 
 </body>
