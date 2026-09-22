@@ -63,12 +63,13 @@
 
     <!-- Main Header with Logo and Navigation -->
     <header>
-        <!-- REDUCED padding and margins to make the header compact -->
-        <div style="background-color: #ffffff; color: #004080; padding: 10px; text-align: center; border-bottom: 4px solid #ffcc00;">
-            <img src="images/logo.png" alt="Basket Digital Logo" width="80" style="margin-bottom: 0;">
-            <h1 style="font-size: 1.8rem; margin: 5px 0;">Basket Digital</h1>
-            <p style="margin: 0 0 5px 0; font-weight: bold;">Join our online retail tech team.</p>
-            <p style="font-size: 0.9rem; margin: 0;">Connecting top IT and UX talent with the fastest-growing e-commerce platforms.</p>
+        <!-- ADDED: display: flex to put logo and text side-by-side safely -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background-color: #ffffff; color: #004080; padding: 15px 30px; border-bottom: 4px solid #ffcc00;">
+            <img src="images/logo.png" alt="Basket Digital Logo" width="120">
+            <div style="text-align: right;">
+                <h1 style="font-size: 1.8rem; margin: 0 0 5px 0;">Basket Digital</h1>
+                <p style="margin: 0; font-weight: bold; font-size: 0.9rem;">Join our online retail tech team.</p>
+            </div>
         </div>
         
         <nav>
