@@ -4,35 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basket Digital | Jobs</title>
+
     <link rel="stylesheet" href="styles/styles.css">
+   
+    <!-- Page specific layout styles -->
+    <style>
+        /* Sidebar layout */
+        .jobs-sidebar {
+            float: right;
+            width: 25%;
+            margin: 0 0 20px 20px;
+            padding: 15px;
+            border: 2px solid #004080;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+       
+        /* Main content area */
+        .jobs-content {
+            float: left;
+            width: 70%;
+        }
+
+        /* Clearfix */
+        .main-container::after {
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div style="background-color: #ffffff; color: #004080; padding: 20px; text-align: center; border-bottom: 4px solid #ffcc00;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 5px;">🛒 Basket Digital</h1>
-            <p style="font-style: italic;">Smart retail, delivered seamlessly.</p>
+    <!-- Main Header -->
+    <header style="display: flex; justify-content: space-between; align-items: center; background-color: #004080; padding: 10px 30px; border-bottom: 4px solid #ffcc00;">
+
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="images/logo.png" alt="Basket Digital Logo" width="80">
+            <div style="color: white; text-align: left;">
+                <h1 style="font-size: 1.8rem; margin: 0;">Basket Digital</h1>
+                <p style="margin: 0; font-size: 0.9rem; color: #ffcc00;">Join our online retail tech team.</p>
+            </div>
         </div>
-       
+
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Job Vacancies</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
-                <li><a href="about.html">About Our Team</a></li>
+            <ul style="list-style-type: none; margin: 0; padding: 0;">
+                <li style="display: inline; margin: 0 15px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="jobs.html" style="color: #ffcc00; text-decoration: underline; font-weight: bold;">Job Vacancies</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="apply.html" style="color: white; text-decoration: none;">Apply Now</a></li>
+
+                <li style="display: inline; margin: 0 15px;"><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <main style="max-width: 1200px; margin: 20px auto; padding: 20px; overflow: hidden;">
+    <main class="main-container" style="max-width: 1200px; margin: 20px auto; padding: 20px;">
        
-        <!-- sidebar for benefits and process -->
+        <!-- Sidebar content -->
         <aside class="jobs-sidebar">
-            <h3>Why Work With Us?</h3>
+            <h3 style="color: #004080; margin-top: 0;">Why Work With Us?</h3>
             <p>At Basket Digital, we offer flexible working hours, remote opportunities, and a dedicated budget for your technical upskilling.</p>
-            <hr>
-            <h3>Application Process</h3>
-            <ol>
+            <hr style="margin: 15px 0;">
+            <h3 style="color: #004080;">Application Process</h3>
+            <ol style="padding-left: 20px;">
                 <li>Submit your application</li>
                 <li>Technical Interview</li>
                 <li>Culture Fit Chat</li>
@@ -40,16 +75,19 @@
             </ol>
         </aside>
 
-        <!-- main job listings -->
+        <!-- Job listings section -->
         <div class="jobs-content">
-            <h2 style="color: #004080; border-bottom: 2px solid #ffcc00; padding-bottom: 10px;">Current Openings</h2>
+            <h2 style="color: #004080; border-bottom: 2px solid #ffcc00; padding-bottom: 10px; margin-top: 0;">Current Openings</h2>
 
+            <!-- Job 1 -->
             <section class="job-listing" style="margin-bottom: 40px; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 <h3 style="color: #333;">Frontend React Engineer</h3>
                 <p><strong>Reference Number:</strong> <span style="font-family: monospace; background-color: #eee; padding: 2px 5px;">FE902</span></p>
-                <p><strong>Salary:</strong> $95,000 - $115,000 + Super</p>
+                <p><strong>Salary:</strong> RM 84,000 - RM 168,000 per annum</p>
                 <p><strong>Reporting To:</strong> Head of Digital Storefronts</p>
                 <p><strong>Description:</strong> We need a Frontend Engineer to build the next generation of our customer-facing retail platform. You will ensure our storefront is fast and accessible.</p>
+               
+                <img src="images/job_frontend.jpg" alt="Frontend Engineer coding on dual monitors" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin: 15px 0;">
                
                 <h4>Key Responsibilities:</h4>
                 <ul>
@@ -64,14 +102,21 @@
                     <li><strong>Essential:</strong> Understanding of WCAG accessibility.</li>
                     <li><em>Preferable:</em> Experience with React.js.</li>
                 </ol>
+               
+                <p style="font-size: 0.85rem; color: #666; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
+                    <em>* Salary data referenced from the <a href="https://www.randstad.com.my/most-in-demand-jobs-malaysia-emerging-technology/" target="_blank" style="color: #004080;">Randstad Malaysia Emerging Technology Career Guide</a></em>
+                </p>
             </section>
 
-            <section class="job-listing" style="padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <!-- Job 2 -->
+            <section class="job-listing" style="margin-bottom: 20px; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 <h3 style="color: #333;">Online Merchandising Specialist</h3>
                 <p><strong>Reference Number:</strong> <span style="font-family: monospace; background-color: #eee; padding: 2px 5px;">MS411</span></p>
-                <p><strong>Salary:</strong> $75,000 - $85,000 + Super</p>
+                <p><strong>Salary:</strong> RM 54,000 - RM 90,000 per annum</p>
                 <p><strong>Reporting To:</strong> E-Commerce Director</p>
                 <p><strong>Description:</strong> Join our product team to manage and optimize digital product listings.</p>
+               
+                <img src="images/job_merch.jpg" alt="Merchandising specialist analyzing retail data on a laptop" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin: 15px 0;">
                
                 <h4>Key Responsibilities:</h4>
                 <ul>
@@ -86,18 +131,29 @@
                     <li><strong>Essential:</strong> Experience with CMS.</li>
                     <li><em>Preferable:</em> Previous experience in retail e-commerce.</li>
                 </ol>
+               
+                <p style="font-size: 0.85rem; color: #666; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px;">
+                    <em>* Salary data referenced from the <a href="https://www.clickacademyasia.com/post/digital-marketing-salary-guide-malaysia-2026-benchmarks-and-career-growth" target="_blank" style="color: #004080;">Digital Marketing Salary Guide Malaysia 2026 Report</a></em>
+                </p>
             </section>
         </div>
 
+
     </main>
 
-    <footer style="background-color: #333; color: white; padding: 30px; text-align: center; margin-top: 50px; clear: both;">
-        <div style="margin-bottom: 15px;">
-            <a href="https://basket-digital-g05.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" style="color: #ffcc00;">Jira Board</a> |
-            <a href="https://github.com/" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
-            <a href="mailto:careers@basketdigital.com" style="color: #ffcc00;">Contact HR</a>
+    <!-- Main Footer -->
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center; margin-top: 50px; clear: both;">
+        <div style="margin-bottom: 10px;">
+            <a href="https://basket-digital-g05.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog" target="_blank" style="color: #ffcc00;">Jira Board</a> |
+            <a href="https://github.com/106702360/cos10026-applied-web-project" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
+            <a href="mailto:contactbasketdigital@gmail.com" style="color: #ffcc00;">Email HR</a>
         </div>
-        <p style="margin-top: 15px; font-size: 0.8rem;">&copy; 2026 Basket Digital. All rights reserved.</p>
+
+        <div style="font-size: 0.85rem; max-width: 700px; margin: 0 auto; line-height: 1.4;">
+            <p><strong>Acknowledgement of Country:</strong> We respectfully acknowledge the Traditional Custodians of the land on which we work and learn, and pay respect to Elders past, present and emerging.</p>
+        </div>
+
+        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Basket Digital.</p>
     </footer>
 
 </body>

@@ -5,26 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basket Digital | Apply</title>
     <link rel="stylesheet" href="styles/styles.css">
-    
-    <!-- Embedded CSS for rubric -->
+   
+    <!-- Page specific form layout styles -->
     <style>
-        .apply-header { text-align: center; margin-bottom: 20px; }
-        .required-star { color: red; }
+        .apply-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .required-star {
+            color: red;
+        }
+       
+        /* Flexbox structure */
+        .apply-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+        .half-width {
+            flex: 1 1 45%;
+        }
+        .quarter-width {
+            flex: 1 1 20%;
+        }
+       
+        .apply-form input[type="text"],
+        .apply-form input[type="email"],
+        .apply-form input[type="date"],
+        .apply-form select,
+        .apply-form textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+            font-family: inherit;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div style="background-color: #ffffff; color: #004080; padding: 20px; text-align: center; border-bottom: 4px solid #ffcc00;">
+    <!-- Main Header -->
+    <header style="display: flex; justify-content: space-between; align-items: center; background-color: #004080; padding: 10px 30px; border-bottom: 4px solid #ffcc00;">
+
+        <div style="display: flex; align-items: center; gap: 15px;">
             <img src="images/logo.png" alt="Basket Digital Logo" width="80">
-            <h1 style="font-size: 2.2rem; margin-bottom: 5px;">Basket Digital Careers</h1>
+            <div style="color: white; text-align: left;">
+                <h1 style="font-size: 1.8rem; margin: 0;">Basket Digital</h1>
+                <p style="margin: 0; font-size: 0.9rem; color: #ffcc00;">Join our online retail tech team.</p>
+            </div>
         </div>
+
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Job Vacancies</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
-                <li><a href="about.html">About Us</a></li>
+            <ul style="list-style-type: none; margin: 0; padding: 0;">
+                <li style="display: inline; margin: 0 15px;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="jobs.html" style="color: white; text-decoration: none;">Job Vacancies</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="apply.html" style="color: #ffcc00; text-decoration: underline; font-weight: bold;">Apply Now</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -35,8 +86,9 @@
             <p>Please fill out all required fields (<span class="required-star">*</span>) to apply.</p>
         </div>
 
+        <!-- Application Form -->
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST" class="apply-form">
-            
+           
             <div class="form-group">
                 <label for="job-ref">Job Reference Number <span class="required-star">*</span></label>
                 <input type="text" id="job-ref" name="job-ref" pattern="[A-Za-z0-9]{5}" title="Exactly 5 alphanumeric characters" required>
@@ -55,16 +107,16 @@
 
             <div class="form-row">
                 <div class="form-group half-width">
-                    <label for="dob">Date of Birth <span class="required-star">*</span></label>
-                    <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" title="Format: dd/mm/yyyy" required>
+                    <label for="dob">Date of Birth (dd/mm/yyyy) <span class="required-star">*</span></label>
+                    <input type="date" id="dob" name="dob" min="1950-01-01" max="2008-12-31" required>
                 </div>
             </div>
 
             <fieldset class="form-group">
                 <legend>Gender <span class="required-star">*</span></legend>
-                <label><input type="radio" name="gender" value="male" required> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
-                <label><input type="radio" name="gender" value="other"> Other</label>
+                <label style="margin-right: 15px;"><input type="radio" name="gender" value="male" required> Male</label>
+                <label style="margin-right: 15px;"><input type="radio" name="gender" value="female"> Female</label>
+                <label style="margin-right: 15px;"><input type="radio" name="gender" value="other"> Other</label>
                 <label><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
             </fieldset>
 
@@ -112,9 +164,9 @@
             <div class="form-group">
                 <label>Skill List <span class="required-star">*</span></label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="skills[]" value="HTML"> HTML5</label>
-                    <label><input type="checkbox" name="skills[]" value="CSS"> CSS3</label>
-                    <label><input type="checkbox" name="skills[]" value="JS"> JavaScript</label>
+                    <label style="margin-right: 15px;"><input type="checkbox" name="skills[]" value="HTML"> HTML5</label>
+                    <label style="margin-right: 15px;"><input type="checkbox" name="skills[]" value="CSS"> CSS3</label>
+                    <label style="margin-right: 15px;"><input type="checkbox" name="skills[]" value="JS"> JavaScript</label>
                     <label><input type="checkbox" name="skills[]" value="UI"> UI/UX Design</label>
                 </div>
             </div>
@@ -124,19 +176,25 @@
                 <textarea id="other-skills" name="other-skills" rows="4"></textarea>
             </div>
 
-            <!-- Inline CSS on button for rubric -->
-            <button type="submit" style="background-color: #004080; color: white; padding: 10px 20px; border: none; font-size: 1.1rem; cursor: pointer; border-radius: 4px;">Submit Application</button>
+            <!-- Form submission button -->
+            <button type="submit" style="background-color: #004080; color: white; padding: 10px 20px; border: none; font-size: 1.1rem; cursor: pointer; border-radius: 4px; margin-top: 10px;">Submit Application</button>
 
         </form>
     </main>
 
-    <footer style="background-color: #333; color: white; padding: 20px; text-align: center; margin-top: 50px;">
+    <!-- Main Footer -->
+    <footer style="background-color: #333; color: white; padding: 20px; text-align: center; margin-top: 50px; clear: both;">
         <div style="margin-bottom: 10px;">
-            <a href="https://basket-digital-g05.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" style="color: #ffcc00;">Jira Board</a> |
-            <a href="https://github.com/" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
-            <a href="mailto:careers@basketdigital.com" style="color: #ffcc00;">Email HR</a>
+            <a href="https://basket-digital-g05.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog" target="_blank" style="color: #ffcc00;">Jira Board</a> |
+            <a href="https://github.com/106702360/cos10026-applied-web-project" target="_blank" style="color: #ffcc00;">GitHub Repo</a> |
+            <a href="mailto:contactbasketdigital@gmail.com" style="color: #ffcc00;">Email HR</a>
         </div>
-        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Basket Digital Jobs.</p>
+
+        <div style="font-size: 0.85rem; max-width: 700px; margin: 0 auto; line-height: 1.4;">
+            <p><strong>Acknowledgement of Country:</strong> We respectfully acknowledge the Traditional Custodians of the land on which we work and learn, and pay respect to Elders past, present and emerging.</p>
+        </div>
+
+        <p style="margin-top: 10px; font-size: 0.8rem;">&copy; 2026 Basket Digital.</p>
     </footer>
 
 </body>
