@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basket Digital | Apply</title>
     <link rel="stylesheet" href="styles/styles.css">
-   
+    
     <!-- Page specific form layout styles -->
     <style>
-        .apply-header {
-            text-align: center;
-            margin-bottom: 20px;
+        .apply-header { 
+            text-align: center; 
+            margin-bottom: 20px; 
         }
-        .required-star {
-            color: red;
+        .required-star { 
+            color: #cc0000; /* Darker red to pass WAVE contrast check */
         }
-       
+        
         /* Flexbox structure */
         .apply-form {
             display: flex;
@@ -38,7 +38,7 @@
         .quarter-width {
             flex: 1 1 20%;
         }
-       
+        
         .apply-form input[type="text"],
         .apply-form input[type="email"],
         .apply-form input[type="date"],
@@ -88,7 +88,7 @@
 
         <!-- Application Form -->
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST" class="apply-form">
-           
+            
             <div class="form-group">
                 <label for="job-ref">Job Reference Number <span class="required-star">*</span></label>
                 <input type="text" id="job-ref" name="job-ref" pattern="[A-Za-z0-9]{5}" title="Exactly 5 alphanumeric characters" required>
@@ -161,15 +161,16 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label>Skill List <span class="required-star">*</span></label>
+            <!-- Fixed WAVE orphaned label & missing fieldset -->
+            <fieldset class="form-group" style="border: none; padding: 0;">
+                <legend style="padding: 0; margin-bottom: 5px;">Skill List <span class="required-star">*</span></legend>
                 <div class="checkbox-group">
                     <label style="margin-right: 15px;"><input type="checkbox" name="skills[]" value="HTML"> HTML5</label>
                     <label style="margin-right: 15px;"><input type="checkbox" name="skills[]" value="CSS"> CSS3</label>
                     <label style="margin-right: 15px;"><input type="checkbox" name="skills[]" value="JS"> JavaScript</label>
                     <label><input type="checkbox" name="skills[]" value="UI"> UI/UX Design</label>
                 </div>
-            </div>
+            </fieldset>
 
             <div class="form-group">
                 <label for="other-skills">Other Skills (Optional)</label>
